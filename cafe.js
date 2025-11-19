@@ -448,22 +448,22 @@ document.addEventListener('DOMContentLoaded', function() {
 // Gallery Lightbox functionality
 let currentImageIndex = 0;
 const images = [
-    { src: 'images/Figure7.jpg', caption: 'Sweet Treats' },
-    { src: 'images/Figure13.jpg', caption: 'Sandwiches' },
-    { src: 'images/Figure4.jpg', caption: 'Coffee' },
-    { src: 'images/Figure10.jpg', caption: 'Cinnamon Choc Twist' },
-    { src: 'images/Figure6.jpg', caption: 'Juice' },
-    { src: 'images/Figure11.jpg', caption: 'Oats Cup' },
-    { src: 'images/Figure16.jpg', caption: 'Our Stores' },
-    { src: 'images/Figure5.jpg', caption: 'Juice' },
-    { src: 'images/Figure12.jpg', caption: 'Chocolate Doughnuts' },
-    { src: 'images/Figure9.jpg', caption: 'Beverages' },
-    { src: 'images/Figure14.jpg', caption: 'Oats Cup' },
-    { src: 'images/Figure17.jpg', caption: 'Our Stores' },
-    { src: 'images/Figure15.jpg', caption: 'Pastries' },
-    { src: 'images/Figure1.jpeg', caption: 'Muesli & Yogurt' },
-    { src: 'images/Figure3.jpg', caption: 'Muffins' },
-    { src: 'images/Figure2.jpeg', caption: 'Sandwiches' }
+    { src: 'Figure7.jpg', caption: 'Sweet Treats' },
+    { src: 'Figure13.jpg', caption: 'Sandwiches' },
+    { src: 'Figure4.jpg', caption: 'Coffee' },
+    { src: 'Figure10.jpg', caption: 'Cinnamon Choc Twist' },
+    { src: 'Figure6.jpg', caption: 'Juice' },
+    { src: 'Figure11.jpg', caption: 'Oats Cup' },
+    { src: 'Figure16.jpg', caption: 'Our Stores' },
+    { src: 'Figure5.jpg', caption: 'Juice' },
+    { src: 'Figure12.jpg', caption: 'Chocolate Doughnuts' },
+    { src: 'Figure9.jpg', caption: 'Beverages' },
+    { src: 'Figure14.jpg', caption: 'Oats Cup' },
+    { src: 'Figure17.jpg', caption: 'Our Stores' },
+    { src: 'Figure15.jpg', caption: 'Pastries' },
+    { src: 'Figure1.jpeg', caption: 'Muesli & Yogurt' },
+    { src: 'Figure3.jpg', caption: 'Muffins' },
+    { src: 'Figure2.jpeg', caption: 'Sandwiches' }
 ];
 
 function openLightbox(index) {
@@ -943,4 +943,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
 });
