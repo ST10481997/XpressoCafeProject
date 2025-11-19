@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Xpresso Café">
+  <meta name="author" content="Ntokozo Tshabalala">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>Order Online | Xpresso Café </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="order-online">
+    <header>
+        <div class="nav-container">
+        <div class="logo-section">
+    <img src="images/Xpresso Cafe.jpg" alt="Logo" class="logo">
+</div>
+
+<!-- Hamburger for mobile -->
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+	  </button>
+
+<nav class="nav-links">
+  <ul>
+<li><a href = "Home-Page.html">Home Page</a></li>
+<li><a href = "About-us.html">About us</a></li>
+<li><a href = "Gallery.html">Gallery</a></li>
+<li><a href = "Menu.html">Menu</a></li>
+<li><a href = "Order-Online.html">Order Online</a></li>
+<li><a href = "Contact-us-and-Store-locator.html">Contact us and Store locator</a></li>
+<li><a href="Enquiry.html">Enquiries</a></li>
+</ul>
+</nav>
+</div>
+    </header>
+
+
+<main>
+
+<div class="container">
+  <div class="order-container">
+    <div class="order-header">
+       <h1>Order Online</h1>
+        <p>Select your favorite items and we'll have them ready for you</p>
+    </div>
+                
+    <div class="form-container">
+      <form id="order-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+
+  <div class="form-group">
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+  </div>
+                        
+  <div class="form-group">
+     <label>Select Item</label>
+    <p>Click on a category to view items</p>
+                            
+    <div class="category-dropdowns" id="category-dropdowns">
+          <!-- Category dropdowns will be populated by JavaScript -->
+    </div>
+                            
+    <div class="selected-item" id="selected-item">
+      <h3>Selected Item</h3>
+      <p id="selected-item-name">No item selected</p>
+      <input type="hidden" id="item" name="item" required>
+     </div>
+         
+     <div class="order-summary" id="order-summary">
+      <h3>Order Summary</h3>
+      <div id="summary-content">
+        <p>No items selected</p>
+      </div>
+
+      <div class="total-section">
+        <strong>Total: <span id="order-total">R0.00</span></strong>
+      </div>
+
+     </div>
+  </div>
+                        
+  <div class="form-group">
+    <label for="notes">Special Instructions</label>
+    <textarea id="notes" name="notes" rows="3" placeholder="E.g. extra sugar, no milk, allergies..."></textarea>
+  </div>
+  
+  <div class="form-buttons">
+    <button type="button" class="add-to-cart-btn" id="add-to-cart">Add to Cart</button>
+    <button type="submit" class="submit-btn">Proceed to Check out</button>
+  </div>
+</form>
+            </div>
+        </div>
+   </div>
+  
+</main>
+
+<!-- Checkout Modal -->
+<div class="modal-overlay" id="checkout-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Checkout</h2>
+      <button class="close-modal" onclick="closeCheckout()">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="checkout-summary">
+        <h3>Order Summary</h3>
+        <div id="checkout-items">
+          <!-- Checkout items will be populated by JavaScript -->
+        </div>
+        <div class="checkout-total">
+          <strong>Total: <span id="checkout-total">R 0.00</span></strong>
+        </div>
+      </div>
+
+      <div class="customer-info">
+        <h3>Customer Information</h3>
+          <p><strong>Name:</strong> <span id="checkout-name"></span></p>
+          <p><strong>Phone:</strong> <span id="checkout-phone"></span></p>
+      </div>
+                
+      <div class="payment-method">
+        <h3>Payment Method</h3>
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="cash" checked>
+            <span>Cash on Pickup</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="card">
+            <span>Credit/Debit Card</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="pickup-time">
+        <h3>Pickup Time</h3>
+        <select id="pickup-time" required>
+          <option value="">Select pickup time</option>
+          <option value="15">15 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="45">45 minutes</option>
+          <option value="60">1 hour</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="modal-footer">
+      <button type="button" class="back-btn" onclick="closeCheckout()">Back to Order</button>
+      <button type="button" class="confirm-order-btn" onclick="confirmOrder()">Confirm Order</button>
+    </div>
+  </div>
+</div>
+
+<!-- Order Confirmation Modal -->
+ <div class="modal-overlay" id="confirmation-modal">
+  <div class="modal-content confirmation-content">
+    <div class="confirmation-header">
+      <i class="fas fa-check-circle"></i>
+      <h2>Order Confirmed!</h2>
+    </div>
+
+    <div class="confirmation-body">
+      <p>Thank you for your order, <span id="confirm-name"></span>!</p>
+      <p>Your order will be ready in <span id="confirm-time"></span> minutes.</p>
+      <p><strong>Order Reference:</strong> <span id="order-reference"></span></p>
+                
+      <div class="order-details">
+        <h4>Order Details:</h4>
+        
+        <div id="confirm-items"></div>
+          <p class="confirm-total"><strong>Total: <span id="confirm-total"></span></strong></p>
+        </div>
+          <p class="pickup-info">Please present your order reference when picking up.</p>
+    </div>
+
+    <div class="confirmation-footer">
+      <button type="button" class="new-order-btn" onclick="startNewOrder()">Place New Order</button>
+    </div>
+  </div>
+</div>
+                
+<script src="cafe.js"></script>
+
+<footer class="footer-info">
+    <p>Copyright &copy; 2025 Xpresso Café | ST10481997</p>
+</footer>
+
+</body>
+</html>

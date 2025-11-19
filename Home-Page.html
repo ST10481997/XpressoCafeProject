@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xpresso Café">
+    <meta name="author" content="Ntokozo Tshabalala">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>Home | Xpresso Café </title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body class="home-page">
+
+    <header>
+        <div class="nav-container">
+        <div class="logo-section">
+    <img src="images/Xpresso Cafe.jpg" alt="Logo" class="logo">
+</div>
+
+<!-- Hamburger for mobile -->
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+        <span></span>
+        <span></span>
+        <span></span>
+	  </button>
+
+
+<ul class="nav-links">
+<li><a href = "Home-Page.html">Home Page</a></li>
+<li><a href = "About-Us.html">About us</a></li>
+<li><a href = "Gallery.html">Gallery</a></li>
+<li><a href = "Menu.html">Menu</a></li>
+<li><a href = "Order-Online.html">Order Online</a></li>
+<li><a href = "Contact-us-and-Store-locator.html">Contact us and Store locator</a></li>
+<li><a href="Enquiry.html">Enquiries</a></li>
+</ul>
+</div>
+    </header>
+
+
+<main class="hero">
+    <section class="intro">
+<h1 class="welcome">Welcome to Xpresso Café ☕!!!</h1>
+<h1 class="promo">WHERE EVERYTHING IS R14!!!!!</h1>
+</section>
+
+<section class="content-home">
+    <div class="text-section">
+                <h1 class="ourgallery">Our Gallery</h1>
+                <h2><u>Take a look at some of the things we offer</u></h2>
+                <br>
+                 <!--Scroll view section-->
+            <section class="scroll-view">
+                <div class="scroll-item">
+                    <img src="images/Xpresso Cafe.jpg" alt="Xpresso Café">
+                    <h3>Xpresso Café</h3>
+                </div>
+                    <div class="scroll-item">
+                    <img src="images/Figure12.jpg" alt="Who we are">
+                    <h3>Chocolate Doughnut</h3>
+                </div>
+                    <div class="scroll-item">
+                    <img src="images/Figure4.jpg" alt="Support activities">
+                    <h3>Coffee</h3>
+                </div>
+                    <div class="scroll-item">
+                    <img src="images/Figure10.jpg" alt="Shelter">
+                    <h3>Cinnamon Choc Twist</h3>
+                </div>
+                <div class="scroll-item">
+                    <img src="images/Figure6.jpg" alt="Smiling children">
+                    <h3>Fresh Juices</h3>
+                </div>
+                    <div class="scroll-item">
+                    <img src="images/Figure13.jpg" alt="Volunteers">
+                    <h3>Sandwiches</h3>
+                </div>
+                    <div class="scroll-item">
+                    <img src="images/Figure14.jpg" alt="Community">
+                    <h3>Oats Cup</h3>          
+                </div>
+            </section>
+</section>
+
+
+<section class="menu">
+<p class="tagline-home">Your daily dose of coffee, freshly brewed with love ❤️
+    <br/>
+    Have a look at our menu below:
+</p>
+<a class="menu-link" href="menu.html">See Our Menu</a>
+</section>
+
+<section class="new-user">
+        <h2>Register New User</h2>
+        <form id="registerForm">
+            <div class="field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required minlength="2">
+                <div class="error" id="nameError"></div>
+            </div>
+            <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="8">
+                <div class="error" id="passwordError"></div>
+            </div>
+            <button type="submit">Submit</button> 
+            <button type="reset">Clear</button>
+        </form>
+    </section>
+
+    
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+</section>
+
+</main>
+<!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+
+<script src="cafe.js"></script>
+
+<footer class="footer-info">
+    <p>Copyright &copy; 2025 Xpresso Café | ST10481997</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: /CSS/
+Disallow: /JS/
+Disallow: /Documents/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow search engines to index important pages
+Allow: /Home%20Page.html
+Allow: /About%20us.html
+Allow: /Gallery.html
+Allow: /Menu.html
+Allow: /Order%20Online.html
+Allow: /Contact%20us%20and%20Store%20locator.html
+Allow: /Enquiry.html
+
+# Sitemap location
+Sitemap: https://www.xpressocafe.co.za/sitemap.xml
+
+# Crawl delay to be respectful of server resources
+Crawl-delay: 1

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xpresso Café">
+    <meta name="author" content="Ntokozo Tshabalala">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>Enquire | Xpresso Café</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="enquiry-page">
+    <header>
+        <div class="nav-container">
+        <div class="logo-section">
+    <img src="images/Xpresso Cafe.jpg" alt="Logo" class="logo">
+</div>
+
+<!-- Hamburger for mobile -->
+      <button class="hamburger" onclick="toggleMenu()"></button>
+        <span></span>
+        <span></span>
+        <span></span>
+	  </button>
+
+
+<nav class="nav-links">
+    <ul>
+<li><a href = "Home-Page.html">Home Page</a></li>
+<li><a href = "About-us.html">About us</a></li>
+<li><a href = "Gallery.html">Gallery</a></li>
+<li><a href = "Menu.html">Menu</a></li>
+<li><a href = "Order-Online.html">Order Online</a></li>
+<li><a href = "Contact-us-and-Store-locator.html">Contact us and Store locator</a></li>
+<li><a href="Enquiry.html">Enquiries</a></li>
+</ul>
+</nav>
+</div>
+    </header>
+
+    <section class="container">
+        <header class="enquiryForm">
+            <div class="title">
+                <h1 class="Name">Xpresso Café</h1>
+            </div>
+            <p class="tagline">Serving perfection in every cup since 2010</p>
+            <p>Have questions about our services? We'd love to hear from you!</p>
+        </header>
+
+        <div class="content">
+            <div class="form-container">
+                <h2 class="services">Service Enquiry Form</h2>
+                <form id="enquiryForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                        <input type="text" id="name" name="name" required minlength="2">
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryType"><i class="fas fa-list-alt"></i> Enquiry Type *</label>
+                        <select id="enquiryType" name="enquiryType" required>
+                            <option value="">Please select...</option>
+                            <option value="catering">Catering Services</option>
+                            <option value="events">Event Hosting</option>
+                            <option value="wholesale">Wholesale Coffee Beans</option>
+                            <option value="membership">Coffee Club Membership</option>
+                            <option value="feedback">Feedback & Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error" id="typeError"></span>
+                    </div>
+
+                    <div class="form-group" id="eventDetails" style="display: none;">
+                        <label for="eventDate"><i class="fas fa-calendar-alt"></i> Preferred Event Date</label>
+                        <input type="date" id="eventDate" name="eventDate">
+                    </div>
+
+                    <div class="form-group" id="guestsField" style="display: none;">
+                        <label for="guests"><i class="fas fa-users"></i> Estimated Number of Guests</label>
+                        <input type="number" id="guests" name="guests" min="1">
+                        <span class="error" id="eventDateError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Your Message *</label>
+                        <textarea id="message" name="message" required minlength="10" placeholder="Please provide details about your enquiry..."></textarea>
+                        <span class="error" id="messageError"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Submit Enquiry</button>
+                        <button type="reset" class="btn btn-reset"><i class="fas fa-redo"></i> Clear Form</button>
+                    </div>
+                </form>
+
+                <div id="enquiryResponse" class="response-container">
+                    <div class="coffee-animation">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h2>Thank You For Your Enquiry!</h2>
+                    <div id="responseDetails"></div>
+                    <p>We'll get back to you within 24 hours.</p>
+                    <button class="btn" onclick="resetForm()" style="margin-top: 20px;">
+                        <i class="fas fa-plus"></i> Submit Another Enquiry
+                    </button>
+                </div>
+            </div>
+
+            <div class="info-sidebar">
+                <div class="info-card">
+                    <h3 class="info"><i class="fas fa-concierge-bell"></i> Our Services</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-mug-hot"></i> Specialty Coffee & Beverages</li>
+                        <li><i class="fas fa-bread-slice"></i> Fresh Pastries & Snacks</li>
+                        <li><i class="fas fa-utensils"></i> Catering for Events</li>
+                        <li><i class="fas fa-calendar-alt"></i> Private Event Hosting</li>
+                        <li><i class="fas fa-mug-hot"></i> Wholesale Coffee Beans</li>
+                        <li><i class="fas fa-users"></i> Coffee Tasting Workshops</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Opening Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td class="day">Monday - Friday</td>
+                            <td>7:00 AM - 9:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td class="day">Saturday</td>
+                            <td>8:00 AM - 10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td class="day">Sunday</td>
+                            <td>8:00 AM - 8:00 PM</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> Why Choose Xpresso Cafe?</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Premium Arabica Coffee Beans</li>
+                        <li><i class="fas fa-check-circle"></i> Expertly Trained Baristas</li>
+                        <li><i class="fas fa-check-circle"></i> Sustainable & Ethical Sourcing</li>
+                        <li><i class="fas fa-check-circle"></i> Cozy & Inviting Atmosphere</li>
+                        <li><i class="fas fa-check-circle"></i> Customizable Catering Options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+<footer class="footer-info">
+    <p>Copyright &copy; 2025 Xpresso Café | ST10481997</p>
+</footer>
+    
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script src="cafe.js"></script>
+    
+</body>
+</html>

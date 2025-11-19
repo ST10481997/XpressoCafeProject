@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xpresso Café">
+    <meta name="author" content="Ntokozo Tshabalala">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>Gallery | Xpresso Café </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="gallery-page">
+
+    <header>
+        <div class="nav-container">
+        <div class="logo-section">
+    <img src="images/Xpresso Cafe.jpg" alt="Logo" class="logo">
+</div>
+<!-- Hamburger for mobile -->
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+	  </button>
+
+<nav class="nav-links" id="navlinks">
+    <ul>
+<li><a href = "Home-Page.html">Home Page</a></li>
+<li><a href = "About-us.html">About us</a></li>
+<li><a href = "Gallery.html">Gallery</a></li>
+<li><a href = "Menu.html">Menu</a></li>
+<li><a href = "Order-Online.html">Order Online</a></li>
+<li><a href = "Contact-us-and-Store-locator.html">Contact us and Store locator</a></li>
+<li><a href="Enquiry.html">Enquiries</a></li>
+</ul>
+</nav>
+</div>
+
+    </header>
+
+
+
+<main class="gallery-main">
+    <div class="main-content">
+        <h1 class="gallery-title">Xpresso Café Photo Gallery</h1>
+        <p class="gallery-subtitle"><marquee>Click on any image to view it in the lightbox.</marquee></p>
+
+        <!-- Gallery Section -->
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="images/Figure7.jpg" alt="Sweet Treats">
+                <div class="image-caption">Sweet Treats</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="images/Figure13.jpg" alt="Sandwiches">
+                <div class="image-caption">Sandwiches</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="images/Figure4.jpg" alt="Coffee">
+                <div class="image-caption">Coffee</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="images/Figure10.jpg" alt="Cinnamon Choc Twist">
+                <div class="image-caption">Cinnamon Choc Twist</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="images/Figure6.jpg" alt="Juice">
+                <div class="image-caption">Juice</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="images/Figure11.jpg" alt="Oats Cup">
+                <div class="image-caption">Oats Cup</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="images/Figure16.jpg" alt="Our stores">
+                <div class="image-caption">Our Stores</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="images/Figure5.jpg" alt="Juice">
+                <div class="image-caption">Juice</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="images/Figure12.jpg" alt="Chocolate Doughnuts">
+                <div class="image-caption">Chocolate Doughnuts</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="images/Figure9.jpg" alt="Beverages">
+                <div class="image-caption">Beverages</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="images/Figure14.jpg" alt="Oats Cup">
+                <div class="image-caption">Oats Cup</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="images/Figure17.jpg" alt="Our stores">
+                <div class="image-caption">Our Stores</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="images/Figure15.jpg" alt="Pastries">
+                <div class="image-caption">Pastries</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(13)">
+                <img src="images/Figure1.jpeg" alt="Muesli & Yogurt">
+                <div class="image-caption">Muesli & Yogurt</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(14)">
+                <img src="images/Figure3.jpg" alt="Muffins">
+                <div class="image-caption">Muffins</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(15)">
+                <img src="images/Figure2.jpeg" alt="Sandwiches">
+                <div class="image-caption">Sandwiches</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <button class="lightbox-btn prev-btn" onclick="changeImage(-1)">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-btn next-btn" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+
+
+
+
+</main>
+<script src="cafe.js"></script>
+
+<footer class="footer-info">
+    <p>Copyright &copy; 2025 Xpresso Café | ST10481997</p>
+</footer>
+
+</body>
+</html>
